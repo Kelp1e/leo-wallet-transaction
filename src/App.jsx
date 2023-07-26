@@ -1,8 +1,8 @@
 import React from 'react';
-import {LeoWalletAdapter} from "@demox-labs/aleo-wallet-adapter-leo";
 import {WalletProvider} from "@demox-labs/aleo-wallet-adapter-react";
-import {DecryptPermission, WalletAdapterNetwork} from "@demox-labs/aleo-wallet-adapter-base";
 import {WalletModalProvider} from "@demox-labs/aleo-wallet-adapter-reactui";
+import {DecryptPermission, WalletAdapterNetwork} from "@demox-labs/aleo-wallet-adapter-base";
+import {LeoWalletAdapter} from "@demox-labs/aleo-wallet-adapter-leo";
 import Wallet from "./components/Wallet.jsx";
 
 const App = () => {
@@ -13,9 +13,7 @@ const App = () => {
     ], [])
 
     return (
-        <WalletProvider wallets={wallets}
-                        decryptPermission={DecryptPermission.UponRequest}
-                        network={WalletAdapterNetwork.Testnet}>
+        <WalletProvider wallets={wallets} decryptPermission={DecryptPermission.UponRequest} network={WalletAdapterNetwork.Testnet}>
             <WalletModalProvider>
                 <Wallet/>
             </WalletModalProvider>
