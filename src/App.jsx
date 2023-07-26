@@ -3,7 +3,8 @@ import {WalletProvider} from "@demox-labs/aleo-wallet-adapter-react";
 import {WalletModalProvider} from "@demox-labs/aleo-wallet-adapter-reactui";
 import {DecryptPermission, WalletAdapterNetwork} from "@demox-labs/aleo-wallet-adapter-base";
 import {LeoWalletAdapter} from "@demox-labs/aleo-wallet-adapter-leo";
-import WalletPage from "./components/WalletPage.jsx";
+import Wallet from "./components/Wallet.jsx";
+import RequestTransaction from "./components/RequestTransaction.jsx";
 
 const App = () => {
     const wallets = React.useMemo(() => [
@@ -15,7 +16,8 @@ const App = () => {
     return (
         <WalletProvider wallets={wallets} decryptPermission={DecryptPermission.UponRequest} network={WalletAdapterNetwork.Testnet}>
             <WalletModalProvider>
-                <WalletPage/>
+                <Wallet/>
+                <RequestTransaction/>
             </WalletModalProvider>
         </WalletProvider>
     );
