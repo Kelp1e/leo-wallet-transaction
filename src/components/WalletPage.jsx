@@ -3,7 +3,7 @@ import {useWallet} from "@demox-labs/aleo-wallet-adapter-react";
 import {DecryptPermission, WalletAdapterNetwork} from "@demox-labs/aleo-wallet-adapter-base";
 import {LeoWalletName} from "@demox-labs/aleo-wallet-adapter-leo";
 
-const Wallet = () => {
+const WalletPage = () => {
     const {select, connect, disconnect, connected, publicKey, connecting, disconnecting} = useWallet()
 
     const onClick = async () => {
@@ -23,4 +23,4 @@ const Wallet = () => {
     );
 };
 
-export default Wallet;
+export default WalletPage;
